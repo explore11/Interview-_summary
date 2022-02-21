@@ -23,3 +23,6 @@ https://hollischuang.gitee.io/tobetopjavaer/#/menu
 
 https://github.com/alibaba/spring-cloud-alibaba/blob/2.2.x/README-zh.md
 https://www.bilibili.com/video/BV1LQ4y127n4?p=165&spm_id_from=pageDriver
+https://www.bilibili.com/video/BV1nK4y1H7g9?spm_id_from=333.999.0.0
+https://www.bilibili.com/video/BV1Xf4y1u7uD?spm_id_from=333.999.0.0
+https://www.bilibili.com/video/BV1iq4y1u7vj?spm_id_from=333.999.0.0
