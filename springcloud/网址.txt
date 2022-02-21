@@ -18,3 +18,5 @@ https://bugstack.cn/md/other/guide-to-reading.html#_2-idea-plugin-%E5%BC%80%E5%8
 https://bugstack.cn/md/project/im/2020-03-04-%E3%80%8ANetty+JavaFx%E5%AE%9E%E6%88%98%EF%BC%9A%E4%BB%BF%E6%A1%8C%E9%9D%A2%E7%89%88%E5%BE%AE%E4%BF%A1%E8%81%8A%E5%A4%A9%E3%80%8B.html
 https://github.com/fantj2016/java-reader
 https://github.com/JavaInterviewHub/JavaInterview
+
+https://hollischuang.gitee.io/tobetopjavaer/#/menu
