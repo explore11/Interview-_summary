@@ -20,3 +20,6 @@ https://github.com/fantj2016/java-reader
 https://github.com/JavaInterviewHub/JavaInterview
 
 https://hollischuang.gitee.io/tobetopjavaer/#/menu
+
+https://github.com/alibaba/spring-cloud-alibaba/blob/2.2.x/README-zh.md
+https://www.bilibili.com/video/BV1LQ4y127n4?p=165&spm_id_from=pageDriver
