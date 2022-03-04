@@ -1,0 +1,12 @@
+前置知识：
+Java基础：
+https://www.bilibili.com/video/BV1Kb411W75N
+
+Hadoop基础：
+https://www.bilibili.com/video/BV1Qp4y1n7EN
+
+Zookeeper基础：
+https://www.bilibili.com/video/BV1to4y1C7gw
+
+Linux：
+网上资料自学  B站搜索尚硅谷官方
