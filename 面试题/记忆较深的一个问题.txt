@@ -1,3 +1,58 @@
+问题：因为在项目上很多的地方，都需要用到时间转换的方法，所以我就时间转换抽出来了一个工具类，把SimpleDateFormat定义为一个静态属性，并提供了一个时间转换的方法，
+本地测试也是通过的。但是在真正使用的时候，有的时候会报出来莫名其妙的数据错误或者抛出异常的现象（for input String “”，empty String）。
+
+原因：SimpleDateFormat类内部有一个Calendar对象引用,它用来储存和这个SimpleDateFormat相关的日期信息，如果你的SimpleDateFormat是个static的,
+那么多个thread 之间就会共享这个SimpleDateFormat，同时也是共享这个Calendar引用，
+但是在一个线程在解析完日期后，会清楚这个Calendar引用，所以也就导致了下一个线程进来进行日期转换的时候，报出没有格式信息的异常。
+
+解决方式：
+1、转换的方法加锁
+2、将SimpleDateFormat定义成局部变量。
+3、ThreadLocal，也叫做线程本地变量或者线程本地存储，每个线程自己的
+4、使用DateTimeFormatter 代替 SimpleDateFormat
+
+
+
+
+package com.atguigu.itdachang;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+/**
+ * @auther zzyy
+ * @create 2020-07-17 16:42
+ */
+public class DateUtils
+{
+    public static final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    /**
+     * 模拟并发环境下使用SimpleDateFormat的parse方法将字符串转换成Date对象
+     * @param stringDate
+     * @return
+     * @throws Exception
+     */
+    public static Date parseDate(String stringDate)throws Exception
+    {
+        return sdf.parse(stringDate);
+    }
+    
+    public static void main(String[] args) throws Exception
+    {
+        for (int i = 1; i <=30; i++) {
+            new Thread(() -> {
+                try {
+                    System.out.println(DateUtils.parseDate("2020-11-11 11:11:11"));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            },String.valueOf(i)).start();
+        }
+    }
+}
+ 
+ 
+
 
 
 
@@ -38,6 +93,9 @@
 
 后来给改了一下  让接口中的调用进行异步编排  发现拦截器那边 获取不到 RequestContextHolder 当前线程的数据 
 后来
+
+
+
 
 
 
